@@ -4,16 +4,88 @@
 
 <!DOCTYPE html> <!-- Doc 문서의, Type 타입, = html  Html5 문서임을 선언, 대소문자 구분없이 정의해도 상관 없음-->
 <html lang="en"> <!-- HTML에서 최상위 태그(root태그)-->
-<head><!-- 현재 HTML 웹 페이지의 정보를 포함한다 / meta정보를 포함한다. -->
-    <meta charset="UTF-8"><!--UTF-8로 인코딩 하겠다 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>제목입니다</title><!-- HTML 페이지의 제목, 브라우저 상단의 웹페이지 탭에 제목으로 노출 -->
-</head> 
-<body><!-- HTML문서에서 실직적으로 보이는 영역을 정의하는 구간 -->
-      <!-- 여기에서 실직적으로 보이는 영역을 정의하는 구간 이미지, 글, 링크, 테이블 등등 -->
-       안녕하세요  ''
-        
+    <head><!-- 현재 HTML 웹 페이지의 정보를 포함한다 / meta정보를 포함한다. -->
+        <meta charset="UTF-8"><!--UTF-8로 인코딩 하겠다 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Instagrame</title><!-- HTML 페이지의 제목, 브라우저 상단의 웹페이지 탭에 제목으로 노출 -->
+    </head> 
+    <body><!-- HTML문서에서 실직적으로 보이는 영역을 정의하는 구간 -->
+        <!-- 여기에서 실직적으로 보이는 영역을 정의하는 구간 이미지, 글, 링크, 테이블 등등 -->
+        <!-- 코드 작성시 엔터를 눌러 줄바꿈을 시도했음에도 불구하고 실행화면에는 한줄로 연결된 채 나온다. -->
 
-    
-</body> 
+    <!-- 상단바 -->
+    <div>
+        <img width=150px src="img/instagramlogo.png"></img>
+        <input type="text" value="검색"></input>
+    </div>
+
+    <!-- 프로필 -->
+    <div>
+            <img width=50px src="img/profile.jpg"></img>  
+            <div>
+                <h2>half_bottle</h2>
+                <p>
+                    <button type="button">프로필편집</button>
+                </p>
+            </div>
+            <div>
+                <strong>
+                    반병현(Bynghyun Ban)
+                </strong><br>
+                작가<br>
+            </div>
+            <p><a href="https://needleworm.github.io">needleworm.github.io</a></p>
+    </div>
+
+    <!-- 하이라이트 들어갈 자리 -->
+    <div>
+        <div>
+            <div>
+                <img width=35px src="img/하이라이트1.jpg"></img>
+            </div>
+            <div>
+                🤣
+            </div>
+        </div>
+        <div>
+            <div>
+                <img width=35px src="img/하이라이트2.jpg"></img>
+            </div>
+            <div>
+                😁
+            </div>
+        </div>
+    </div>
+    <!-- 하이라이트 들어갈 자리 -->
+
+        <div>
+            <div>
+                게시물<br>133
+            </div>
+            <div>
+                팔로워<br>408
+            </div>
+            <div>
+                팔로우<br>189
+            </div>
+        </div>
+
+            <div>아이콘이 들어갈 자리</div>
+        <div>
+            <!-- 게시물 썸네일이 들어갈 자리
+                 부모 너비의 32%값이 지정된다
+                 퍼센트로 지정된 값은 화면 크기에 따라 유동적으로 바뀐다.  
+                 창 크기에 변화에 맞춰 그때그때 화면의 정보나 크기가 함께
+                 바뀌는 웹 페이지를 반응형 웹이라고 한다.-->
+            <img src="/img/책1 (1).jpg" width="32%">
+            <img src="/img/책1 (2).jpg" width="32%">
+            <img src="/img/책1 (3).jpg" width="32%">
+            <img src="/img/책1 (4).jpg" width="32%">
+            <img src="/img/책1 (5).jpg" width="32%">
+            <img src="/img/책1 (6).jpg" width="32%">
+            <img src="/img/책1 (7).jpg" width="32%">
+            <img src="/img/책1 (8).jpg" width="32%">
+            <img src="/img/책1 (9).jpg" width="32%">
+        </div>
+    </body> 
 </html>
