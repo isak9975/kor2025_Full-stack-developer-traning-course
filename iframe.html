@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>iframe html</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+<!-- **웹 페이지 내에서 다른 웹페이지를 삽입하는 태그**
+    현재 페이지 안에 또 다른 HTML 페이지나 외부 콘텐츠(유튜브영상, 지도)를 불어 올 수 있다.  
+
+    
+    -->
+    <h1> 웹 페이지 삽입하기</h1>
+    <iframe src="https://www.wikipedia.com" width="800" height="500"></iframe>
+    <hr>
+
+    <h1> 유튜브 영상 삽입</h1>
+    <iframe  style="border: 20px solid rgb(87, 45, 81) ;" width="560" height="315" src="https://www.youtube.com/embed/PCeMqkodi3g?si=-I3ToLFOy44Jp2Ca" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+
+    <h1>구글지도 삽입</h1>
+    <!-- loading="lazy" 페이지가 처음 로드될 때 iframe 의 컨텐츠를
+     바로 로드하지 않고 사용자가 스크롤을 내려 해당 위치에 도달했을때 
+     로드한다. -->
+    <iframe width="60%", height="50%", allowfullscreen style="border: 1px red solid;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25323.244921146394!2d126.70632173234556!3d37.49835049375936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b7da9193bf683%3A0x2deb039b28ede835!2z7L-g7Jqw7L-g7JqwIOu2gO2PieygkA!5e0!3m2!1sko!2skr!4v1740380629274!5m2!1sko!2skr" loading="lazy"></iframe>
+    <hr>
+
+    <h1>내부 html 문서 삽입</h1>
+    <iframe src="table.html" width="600" height="400" allowfullscreen=""></iframe>
+    <hr>
+
+<div>
+    <h1>내 홈페이지 삽입하기</h1>
+    <iframe src="http://isak9975.github.io" width="60%" height="40%" allowfullscreen=""></iframe>
+    <hr>
+</div>
+
+    <h2>iframe 안에 직접 html 작성하기</h2>
+    <iframe width="400" height="300" style="border: 0cap;" srcdoc="
+    <html>
+        <body>
+            <h2>내장된 html <h2>
+                <p> 'iframe'은 내부적으로 html을 포함하고 있음!</p>
+            <table border=1px>
+                <tr>
+                    <td>번호</td>
+                    <td>책제목</td>
+                    <td>작성자</td>
+                    <td>가격</td>
+                    <td>수량</td>
+                </tr>
+            </table>
+        </body>
+    </html>
+    "></iframe>
+    <!-- 
+        주의해야 할 점
+        1. 일부 사이트는 iframe 삽입을 차단함 
+        2. 반응형 웹 디자인에 적절하지 않음. -> 너비와 높이가 고정되어 있기 때문에 레이아웃이 깨질수 있음.
+        CSS 이용해서 반응형으로 만들 수 있다.
+        3. SEO(검색 엔진 최적화)가 불리할 수 있다. -> iframe 안에 있는 내용은 검색엔진이 못 읽어서
+        -->
+
+
+    <hr>
+    <h1>오디오 태그</h1>
+    <audio controls><!-- controls => 재생 인터페이스 제공 -->
+    <source src="audio.mp3" type="audio/mpeg"></audio>
+    브라우저가 오디오 태그를 지원하지 않습니다
+
+    <hr>
+    <h1>비디오 태그</h1>
+    <video controls>
+        <source src="비디오경로" type="video/mp4">
+        브라우저가 비디오 태그를 지원하지 않습니다.
+    </video>
+
+</body>
+</html>

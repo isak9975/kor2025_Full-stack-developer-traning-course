@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 줄을 바꾸려면 br태크 사용하기 -->
+    안녕하세요.<br>
+    반갑습니다.<br>
+    <hr>
+    <!-- 띄어쓰기는 최대 한칸만 적용 가능 -->
+     저는 &nbsp&nbsp 엔티티 코드입니다
+    <!-- 띄어쓰기를 의미하는 엔티티코드 = &nbsp(non breaking space) 
+     HTML 문서에 특수문자를 입력할 때 코드로 인식되지 않게하기 위해 입력하는 코드 --><br>
+
+     <!-- '&'로 시작하고 ';'로 끝나면 엔티티코드로 인식한다  -->
+
+    &copy; <!-- 저작권 기호  --><br>
+    &amp; <!-- & 기호 -->
+    <hr>
+    <!-- 텍스트 기울이기 -->
+    <i>텍스트 기울이기</i><br><!-- 강조 없음. -->
+    <em>텍스트 기울이기</em><!-- strong과 같이 읽을때 강조함 -->
+
+    <hr>
+    <h3>취소선</h3>
+    My favorite color is <del>blue</del> red. <!-- del 태그는 취소선을 긋는다 -->
+
+    <hr>
+    <h3>작은글씨</h3>
+    HTML <samll>Small</samll> Formatting
+
+    <hr>
+    <h3>첨자</h3>
+    This is <sub> subscripted</sub> text <br>
+    This is <sup> subscripted</sup> text
+    5log<sub>2</sub><br>
+    This is <sup>subscripted</sup>text<br>
+    2<sup>3</sup>
+
+    <hr>
+    <h3>태그 내의 내용이 그대로 나온다.</h3>
+    <!-- IDE 내의 들여쓰기 까지 인식한다. -->
+    <pre>
+    안녕하세요
+    반갑습니다
+        </h2>
+
+    var myArrayList = [];
+    myArray[1000] = true;
+    console.log(myArray.length); //1001
+    console.log(myArray[0]); // undefined
+    </pre>
+
+    <!-- 
+    경로
+    절대 경로 : 특정 문서 페이지 또는 이미지등 자원에 접근할 수 있는 전체 URL을 의미한다.
+    photo.png 파일이 /web/public/img/photo.png 에 있다면 
+    <a href = '/web/public/img/photo.png' 처럼 다써야한다. 
+
+    상대 경로 : 작업하고 있는 파일의 위치가 /web/public/img/photo.png,
+    근데 내가 현재 작업하고 있는 파일의 위치가 /web/public 이라면
+    <a href = 'img/photo.png'> 처럼 작성하면 된다.
+    -->
+
+
+</body>
+</html>
