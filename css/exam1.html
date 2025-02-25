@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>exam1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+        <style>
+
+        *{margin : 0 ;}
+       
+        dl{ width : 600px;
+            border : 5px double black;
+        /* auto를 사용하려면 width속성이 적용되어 있어야 한다. */
+            margin : 0 auto;}/*  내용의 종간정렬 */
+
+        dt{
+            padding : 15px 0;
+            text-align: center;
+            background-color: blueviolet;
+            border-bottom: 10px solid blue;;
+            letter-spacing: 10px;/* 글자간의 간격 */
+        }
+
+        dd{
+            padding : 10px 0;
+            text-indent: 15px ;/* 들여쓰기 처리 */
+            border-bottom : 3px, dotted black;
+        }
+
+
+
+            .a{border-bottom : 10px solid purple;
+                font : bold 20px "맑은 고딕";
+                color : blue;
+                background-color: rgb(227, 209, 245);
+                padding : 20px 120px;
+            }
+
+            .b{padding-left : 20px;
+                padding : 5px;
+                
+            }
+
+            .c{padding-left : 20px;
+                padding : 5px;
+                border-top : 2px dotted black;}
+
+            .d{display: inline-block;
+                border : 6px double }
+
+        </style>
+
+</head>
+<body>
+    <div class="d">
+
+        <div class="a">한국의 속담</div>
+
+        <div class="b">까마귀 날자 배 떨어진다.</div>
+
+        <div class="c">발 없는 말이 천리 간다.</div>
+
+    </div>
+
+
+    <dl>
+        <dt>한국의 속담</dt>
+        <dd>까마귀 날자 배 떨어진다.</dd>
+        <dd>발 없는 말이 천리 간다.</dd>
+    </dl>
+    
+</body>
+</html>

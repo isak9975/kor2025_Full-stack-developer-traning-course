@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        /* 마진이 적용될때 요소가 작아진다 */
+        p{border : 5px solid orange; background-color: rgb(255, 241, 216); }
+        #box1{margin :0px;}/* 상,하,좌,우 마진 적용  */
+        #box2{margin : 20px 50px;}/* 상,하 = 20px 좌,우 = 50px 마진 적용  */
+        #box3{margin : 20px 50px 30px; } /* 상 = 20px 좌,우 = 50px 하 = 30px 마진 적용  */
+        #box4{margin : 40px 70px 30px 70px;} /* 상 = 20px 우 = 50px 하 = 30px 좌 = 40px 마진 적용  */
+        #box5{margin : auto 0px} /* 가운데 정렬 */
+    </style>
+
+</head>
+<body>
+    <!-- 요소와 외부 사이의 여백 -->
+     <p id="box1">마진 적용 테스트</p>
+     <p id="box2">마진 적용 테스트</p>
+     <p id="box3">마진 적용 테스트</p>
+     <p id="box4">마진 적용 테스트</p>
+     <p id="box5">마진 적용 테스트</p>
+
+    
+</body>
+</html>
