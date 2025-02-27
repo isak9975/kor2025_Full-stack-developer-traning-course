@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>sinup html</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(205, 241, 241);
+            display: flex;
+            height: 100vh;
+            ;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .signup-container {
+            display: flex;
+            background-color: white;
+            padding: 70px 40px;
+            border-radius: 8px;
+        }
+
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signup-container form h2 {
+            text-align: center;
+        }
+
+        .signup-container label {
+            font-weight: bold;
+        }
+
+        .signup-container input {
+            border: 1px solid gray;
+            border-radius: 8px;
+            padding: 13px;
+        }
+
+        .signup-container button {
+            background-color: blue;
+            color: white;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+
+        /* 중복체크 */
+        .signup-container .idbox>button {
+            margin-left: 10px;
+            padding: 0 15px
+        }
+
+        /* 회원가입 */
+        .signup-container .signupbutton {
+            margin: 10px 0px;
+            padding: 10px
+        }
+
+        .signup-container form .idbox {
+            display: flex;
+            flex-direction: row;
+        }
+    
+
+        .signup-container form .emailbox {
+            display: flex;
+        }
+
+        .signup-container #aa {
+            font-size: 30px;
+        }
+
+        .signup-container .link {
+            text-align: center;
+        }
+
+        .signup-container a {
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="signup-container">
+        <form>
+            <h2>회원가입</h2>
+            <label for="username">이름</label>
+            <input type="text" id="username" placeholder="이름 입력">
+            <label for="userid">아이디</label>
+            <div class="idbox">
+                <input type="text" id="userid" placeholder="아이디 입력">
+                <button for="userid" type="button">중복체크</button>
+            </div>
+
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" placeholder="비밀번호 입력">
+            <label for="passwordcheck">비밀번호 확인</label>
+            <input type="password" id="passwordcheck" placeholder="비밀번호 확인">
+            <label for="email">이메일</label>
+
+            <div class="emailbox">
+                <input type="text" id="email" placeholder="이메일"><span id="aa">@</span>
+                <select id="email">
+                    <option value="naver.com">naver.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="duam.com">duam.net</option>
+                </select>
+            </div>
+            <button class="signupbutton" type="button">회원가입</button>
+            <div class="link">이미 계정이 있으신가요?<a href="http://127.0.0.1:3000/css/login.html">로그인</a></div>
+        </form>
+
+    </div>
+</body>
+
+</html>

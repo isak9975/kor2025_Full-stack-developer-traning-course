@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        .flex-container{display: flex;
+            height:200px;
+            border : 20px solid #eee;
+            padding : 10px}
+
+        .flex-item{
+            background-color: lightblue;
+            color:#222;
+            padding : 20px;
+            border : 1px solid darkblue;
+        }
+
+        .item1{
+            order : 3;
+            flex-grow: 1;
+            align-self: end;
+
+        }
+
+        .item2{
+            order :1;
+            flex-grow :1;
+            align-self: center;
+        }
+
+        .item3{
+            order :2;
+            /* 공간이 부족할때 축소 */
+            flex-shrink: 1;
+            /* 기본크기를 100로 지정 */
+            flex-basis : 100px;
+            align-self: start;
+        }
+
+    </style>
+ </head>
+ <body>
+
+    <h1>CSS flex item 속성 예제</h1>
+    <div class="flex-container">
+        <div class="flex-item item1">item1</div>
+        <div class="flex-item item2">item2</div>
+        <div class="flex-item item3">item3</div>
+    </div>
+    
+    
+ </body>
+ </html>

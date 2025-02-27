@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        ul{list-style: none;}
+        /* 첫번째 요소만 선택 할수 있음 */
+        li:first-child{color:red;}
+        /* 마지막 요소만 선택할 수 있음 */
+        li:last-child{color:blue;}
+        /* 홀수만을 선택 할 수 있음 */
+        li:nth-child(odd){color : purple}
+        /* 짝수만을 선택 할 수 있음 */
+        li:nth-child(even){color:green}
+        /* x의 배수를 선택할 수 있음. */
+        li:nth-child(4n){color : blue}
+        /* 특정 요소만 선택 할 수 있음. */
+        li:nth-child(6){color:yellow}
+
+        
+         a{color : gray; text-decoration: none ; }
+
+         a:hover{color : orange;text-decoration:line-through;}
+        
+         a:active{color:red}
+
+    </style>
+
+</head>
+<body>
+    <!-- 가상 클래스 
+        html 요소의 특정 상태나 조건에 따라 
+        스타일을 적용할 수 있도록 해주는 css 선택자 이다.-->
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+        </ul>
+
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+        </ul>
+
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+
+
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">사이드맵</a></li>
+            <li><a href="#">오시는길</a></li>
+        </ul>
+
+
+</body>
+</html>

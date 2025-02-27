@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>shadow html</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        .shadow-box {
+            width: 300px;
+            margin: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            /* 수평 수직 흐림정도 색상 */
+            /* rgba(빨간색,초록색,파란색,투명도) */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .shadow-box h1 {
+            font-size: 24px;
+            color: #333;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .shadow-box p {
+            color: #333;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <!-- box-shadow, text-shadow 속성
+        요소에 그림자 효과를 주기 위해 사용하는 속성 -->
+    <div class="shadow-box">
+        <h1>shadow 예제</h1>
+        <p>이 상자는 box-shadow, 제목은 text-shadow가 적용 되었습니다</p>
+    </div>
+</body>
+
+</html>

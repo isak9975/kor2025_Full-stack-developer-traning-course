@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        /* 왼쪽위로 빠짝 초기화 */
+        *{margin : 0; padding : 0}
+
+        p{
+            border : 1px solid black;
+            width : 100px;
+        height : 100px;
+        padding : 10px;
+        position  : absolute;}
+
+        .box1{background-color: yellowgreen;
+        left : 100px;
+        top : 100px;
+        z-index :3;}
+
+        .box2{background-color: orange;
+        left: 120px;
+    top: 120px;
+    z-index: 2;}
+
+        .box3{background-color: teal;
+        left: 140px;
+        top: 150px;
+        z-index: 1;}
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- 
+    z-index : CSS에서 요스들이 쌓이는 순서를 제어하는 속성 이 속성은 주로 겹치는 요소들이 있을때, 어떤 요소앞에 나타날지 결정한다 
+     
+    position 속성 : 요소가 문서 내에서 어떻게 배치되는지 제어하는 속성
+     ㄴ static(기본값) : 기본적인 위치 지정방식, 문서의 기본적인 흐름을 따라간다.
+     ㄴ relative : static 과 유사하나 원래 위치에서 주어진 값 만큼만 이동한다.
+     ㄴ absolute : 기본 흐름을 따르지 않고 부모 요소의 상대적 위치로 지정된다
+     ㄴ fixed : 화면의 스크롤이나 움직임에 관계없이 고정
+    -->
+
+    <p class="box1">박스1</p>
+    <p class="box2">박스2</p>
+    <p class="box3">박스3</p>
+</body>
+
+</html>

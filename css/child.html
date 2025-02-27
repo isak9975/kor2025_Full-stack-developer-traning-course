@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        /* '>' 자신의 직계 자식에게만 적용 */
+        #header > h1{
+            color : red;
+        }
+
+        #contents > h1{color: blue;}
+    </style>
+
+</head>
+<body>
+    <!-- 자식 선택자 -->
+    <div id="header">
+        <h1>나는 Header의 자식이오</h1>
+
+        <div id="nav">
+            <h1>navigation</h1>
+        </div>
+
+        <div id="nav1">
+            <h1>navigation</h1>
+        </div>
+
+        <div id="contents">
+            <h1>contents의 자식</h1>
+        </div>
+
+     </div>
+</body>
+</html>

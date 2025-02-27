@@ -1,0 +1,161 @@
+/* 썸네일을 포함하고 있는 div */
+.thumbnail_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 열 형태로 1:1:1씩 들어가라 */}
+/* fr(fraction) 사용 가능한 공간의 일부분
+    비율로 공간을 나눈다고 생각하면 된다. */
+
+
+/* 섬네일 이미지 */
+.thumbnail{width : 100%;
+    cursor: pointer;}
+
+.thumbnail:hover{opacity: 0.8;
+                border : 0.1px solid #ccc;}
+
+
+/* 상태바 정렬 */
+#stat_bar{display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-top: 1px solid gray;
+        border-bottom : 1px solid gray;
+        margin : 5px 0px;}
+
+/* 상태바 내부의 글자 가운데 정렬 */
+.stat{text-align: center;}
+
+/* 프로필 사진의 컨테이너 */
+#profile_pic{
+    width: 50px;
+    height: 50px;
+}
+
+/* 하이라이트 사진의 컨테이너 */
+.highlight_pic{
+    width: 35px;
+    height : 35px;    
+}
+
+/* 원형으로 만드려는 이미지 */
+.circle_pic{
+    border : 1px white solid;
+    border-radius: 50%;
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* 하이라이트 영역 gird 사용하여 정렬하기 */
+#highlight_area{display: grid;
+
+                /* 비어 있는것에 1fr, 내용물 있는거에 45px(35px) 할당하여 왼쪽 정렬 */
+                grid-template-columns: 45px 45px 1fr;
+                
+                }
+
+/* 하이라이트 중앙 정렬*/
+.highlight{ 
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 이모티콘은 문자취급 */
+    text-align: center; 
+}
+
+#profile{display: grid;
+        grid-template-columns: 1fr 3.5fr;}
+
+#profile_info{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    height:auto;
+}
+
+#id{
+    font-size: 18px;
+    font-weight: 100;
+}
+
+/* 버튼 속성 넣기 */
+button{
+    height : 80%;
+    width : 95%;
+
+    font-size: 10px;
+    background-color: white;
+    border : 1px gray solid;
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+/* 버튼의 호버기능  */
+button:hover{background-color: #ccc;}
+button:active{color:white}
+
+#top{
+    display: grid;
+    grid-template-columns: 4fr 7fr 1fr 1fr 1fr 1fr;
+    height : auto;
+    align-items: center;
+    border-bottom : solid 1px black;
+
+}
+
+#top img{
+    margin-left: auto;
+    margin-right: auto;
+
+    height:100%;
+    object-fit: contain;
+}
+
+#top input{
+    height : 35%;
+    width : 95%;
+
+    margin-left:auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+
+    text-align: center;
+    background-color: rgb(250, 250, 250);
+
+    border : solid gray 1px;
+    border-radius: 3px;
+
+    font-size:10px;
+    font-weight: 100;
+}
+
+i{
+    font-size: 30px;
+    margin-top:5px;
+    cursor: pointer;
+}
+/* 아이콘들 액티브 기능 */
+i:active{color:gray}
+
+#top div{
+    text-align: center;;
+}
+
+#sub_icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    text-align: center;
+    font-size: 15px;
+
+    height: 50px;
+    cursor: pointer;
+}
+
+/* 서브 아이콘에 호버기능 */
+/* .selected{border-bottom: 3px gray solid;} */
+#sub_icons div:hover{border-bottom: 3px gray solid;}
+
+

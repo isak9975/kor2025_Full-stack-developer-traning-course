@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        /* 기본 설정 및 중앙 배치 */
+        body{display:flex;
+            margin : 0;
+            padding : 0;
+            background-color : aliceblue;
+            justify-content: center;
+            align-items:center;
+            height : 100vh;/* 중요 */
+            }
+
+        /* 로그인 컨테이너 */
+        .login-container{background: #fff;
+                padding:40px;
+                border-radius: 8px;/* 꼭지점 둥글게 만들어주는 속성 */
+                width: 300px;
+                }
+        
+        /* '로그인'설정 */
+        .login-container h2{text-align: center;
+                            margin-bottom: 20px;}/* 텍스트 중앙 정렬 */
+        /* 폼 내부 요소스타일 */
+        .login-container form{display: flex;
+                            flex-direction: column;}
+        /* 레이블 스타일 */
+        .login-container label{font-weight: bold;}
+
+        /* 입력 필드 스타일 */
+        .login-container input{padding : 10px; margin-bottom:10px;border:1px solid #ccc;border-radius: 4px;font-size: 14px;}
+
+        /* 로그인 버튼 스타일 */
+        .login-container button{padding:10x;background: #3f29ef;color:#fff;border:none;border-radius: 4px;font-size: 16px;cursor :pointer;}
+
+        /* 마우스 호버시 버튼 변화 */
+        .login-container button:hover{background-color: #2e1cb3;}
+
+        .login-container .signup-link a{text-decoration: none;
+                                        color:#3f29ef}
+
+    </style>
+
+
+</head>
+<body>
+    <!--  -->
+    <div class="login-container">
+        <h2>로그인</h2>
+        <form action="#" method="POST">
+            <label for="username">아이디</label>
+            <input type="text" id="username" placeholder="아이디입력">
+
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" placeholder="비밀번호입력">
+
+            <button type="button">로그인</button>
+        </form>
+            <div class="signup-link">아직 회원이 아니신가요?<a href="http://127.0.0.1:3000/css/signup.html">회원가입</a></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+            #menu{display:flex;
+            list-style: none;
+            margin:0;
+            padding: 0;}
+
+            #menu > li{position: relative;
+                        border-top:1px solid gray;
+                        border-bottom:1px solid gray; 
+                        border-right:1px solid gray;}
+
+            #menu > li:first-child{border-left : 1px solid gray;}
+
+            #menu > li > a{display :block; padding : 2px 10px;text-decoration :none;}
+
+            #menu > li > a:hover{
+                background-color: #999;
+                color : #fff;
+            }
+
+
+            .depth_1{
+                position :absolute;
+                display :none;
+                margin: 0;
+                padding :0;
+                list-style: none;
+                background-color: #fff;
+                flex-direction: row;
+                white-space: nowrap;
+            }
+
+            #menu > li:hover .depth_1{
+                display:flex; /* hover 시점에만 display가 flex다  */
+            }
+
+            .depth_1 li{
+                border-top : 1px solid gray;
+                border-right : 1px solid gray;
+                border-bottom : 1px solid gray;
+            }
+
+            .depth_1 li:first-child{
+                border-left:1px solid gray;
+            }
+
+            .depth_1 a{
+                display : flex;
+                padding : 2px 10px;
+                text-decoration: none;
+            }
+
+            .depth_1 a:hover{
+                background-color: #999;
+                color:#fff;
+            }
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <div id="a1">
+        <ul id="menu">
+            <li><a href="#">HTML</a>
+                <ul class="depth_1">
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">JQuery</a></li>
+            <li><a href="#">Jsp</a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>

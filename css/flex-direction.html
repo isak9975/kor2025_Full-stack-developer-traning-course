@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>flex-direction html</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        section{display : flex;
+        border : 1px dashed black;}
+
+        div{
+            width : 60px; height : 60px;
+            text-align: center;
+            font-size: 2em;
+            color: white;
+            border : 2px solid black;
+            margin: 10px ;
+        }
+
+        div:nth-child(1){background-color: yellowgreen;}
+        div:nth-child(2){background-color: violet;}
+        div:nth-child(3){background-color: floralwhite;}
+
+        div[content ~= 01 ]{background-color: red;}
+
+        .row{flex-direction: row;}
+
+        .row-reverse{flex-direction: row-reverse;}
+
+        .colmn{flex-direction: column;}
+
+        .colmn-reverse{flex-direction: column-reverse;}
+        
+
+    </style>
+
+</head>
+<body>
+
+    <h3>row</h3>
+    <!-- 시맨틱 태그 -->
+    <section class="row">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </section>
+
+    <section class="row-reverse">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </section>
+
+    <section class="colmn">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </section>
+
+    <section class="colmn-reverse">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </section>
+
+    
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        /* 기본설정 및 중앙정렬 */
+        body{margin : 0;
+            padding : 0;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height : 100vh;}
+
+        /* sinup container 기본 세팅 */
+        .signup-container{background: #fff;
+                            padding : 40px;
+                            border-radius: 8px;
+                            width: 350px;}
+
+        /* 제목 센터로 설정 */
+        .signup-container h2{text-align: center; 
+                            margin-bottom: 20px;}
+        
+        /* 폼 내부 요소들을 세로로 배치 */
+        .signup-container form{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* 레이블 스타일 */
+        .signup-container label{
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* 공통 입력 필드 스타일 */
+        .signup-container input[type="text"],
+        .signup-container input[type="password"],
+        .signup-container input[type="email"]{
+            padding : 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        /* box-sizing CSS 에서 요소의 크기를 계한하는 방식을 변경하는 속성 
+            content-box (기본값) width + padding + margin + border
+            -요소의 너비와 높이는 오직 내용 영역만을 의미한다.
+            -padding, margin, border는 요소의 총 크기에 추가된다.
+
+            border-box  width - padding - border
+            -요소의 너비와 높이는 padding과 border를 포함한 전체 영역
+            -지정한 너비 내에서 padding 과 border가 계산 되므로 내용 영역은 자동으로 줄어든다. 
+        */
+        .signup-container input:focus{ 
+            outline : none;
+            /* 클릭 했을 시 나오는 테두리 업애겠다. */
+            border-color : #3f29ef;
+        }
+
+        /* 아이디 입력과 중복체크 버튼을 감싸는 flex 컨테이너  */
+        .namegroup{
+                display: flex;
+                /* align-items 는 원래 진행축과 반대이기에 colum 상태에서 flex-start 했을시 위로 붙는다. */
+                align-items: flex-start;
+                /* 요소간의 간격이 들어간다 */
+                gap : 10px;
+                margin-bottom: 15px;;
+        }
+
+        .namegroup input{
+            /* flex = 비율 차지 1(flex-grow)주고 나머지는 다른애가 차지하게. */
+            flex:1;
+        }
+
+        /* 중복체크 버튼 스타일 */
+        .namegroup button{
+            padding : 8px 15px;
+            background-color: #3f29ef;
+            color: white;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* 버튼에 마우스 올렸을 때 색을 #2e1cb3으로 바꾸기 */
+        .namegroup button:hover{background: #2e1cb3;}
+
+        /* 이메일 입력과 드롭다운 메뉴를 감싸는 flex 컨테이너 */
+        .email-group{display: flex;
+                    align-items: flex-start;
+                    gap:5px;
+                    margin-bottom: 15px;}
+        
+        /* 이메일 입력 필드와 드롭다운에 동일한 높이 및 스타일 적용 */
+        .email-group input,
+        .email-group select{ height: 38px;
+                            padding : 10px;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 14px;}
+
+        /* 이메일 입력 칸 조금 수정 */
+        .email-group input{flex:1;}
+
+        /* @스타일 */
+        .email-group span{font-size: 16;
+                            position: relative;
+                            top : 9px}
+
+        /* 회원가입 버튼 스타일 */
+        .signup-container button.signup-btn{
+            padding : 10px;
+            background-color: #3f29ef;
+            color : #fff;
+            border : none;
+            font-size : 16px;
+            cursor:pointer;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .signup-container button.signup-btn:hover{
+            background-color: #2e1cb3;
+        }
+
+        .signin-link{
+            margin-top: 10px;
+            text-align: center;
+            font-size:14px;
+        }
+
+        .signin-link a{text-decoration: none;
+        color: #3f29ef;}
+
+
+        
+    </style>
+
+</head>
+<body>
+    <div class="signup-container">
+        <h2>회원가입</h2>
+        <form>
+            <label for="name">이름</label>
+            <input type="text" id="name" placeholder="이름 입력">
+
+            <label for="username">아이디</label>
+            <div class="namegroup">
+                <input type="text" id="username" placeholder="아이디 입력">
+                <button type="button">중복체크</button>
+            </div>
+
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" placeholder="비밀번호 입력">
+            <label for="confirm-password">비밀번호 확인</label>
+            <input type="password" id="confirm-password" placeholder="비밀번호 확인">
+
+            <label for="email">이메일</label>
+            <div class="email-group">
+                <input type="text" id="email" placeholder="아이디">
+                <span>@</span>
+                <select id="email-domain">
+                    <option>naver.com</option>
+                    <option>gmail.com</option>
+                    <option>daum.net</option>
+                </select>
+            </div>
+
+            <button class="signup-btn">회원가입</button>
+
+        </form>
+
+        <div class="signin-link">
+            이미 계정이 있으신가요?<a href="loginbox.html">로그인</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>

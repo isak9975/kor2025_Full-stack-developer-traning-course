@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>menu3 htnk</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        /* 지정된 칸만 보이기 */
+        .container{display: inline-block;} 
+        /* div 전체 설정 크기 + 테두리 + 색깔 */
+        div{border : 2px solid black; color : blue;}
+        
+
+        /* 가로 정렬 및 안보이게 */
+        .main{display:flex}
+        /* 내부 칸 늘려주기 */
+        .main div{padding : 10px}
+
+
+        /* 가로 정렬 및 안보이게 */
+        #aa{display : flex;visibility:hidden;}
+        /* 내부 칸 늘려주기 */
+        #aa div{padding : 10px;}
+
+
+        /* 호버시 보이게 하기 */
+        .container:hover #aa{visibility:visible; }
+        /* 호버시 색상 + 배경색 변하기 */
+        #aa div:hover{ color:white; background-color: gray;}
+
+        
+        
+    </style>
+
+</head>
+<body>
+
+    <section class="container">
+        
+        <div class="main">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>JQuery</div>
+            <div>Jsp</div>  
+        </div>
+    
+        <section id="aa">
+            <div>메뉴1</div>
+            <div>메뉴2</div>
+            <div>메뉴3</div>
+        </section>
+
+    </section>
+    
+
+    
+    
+</body>
+</html>

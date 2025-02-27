@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>login html</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        body{
+            /* height: 100vh; */
+
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;}
+
+        #loginbox{  display :inline-block;
+                    justify-content: center;
+                    background-color: white;
+                    border-radius: 10px;
+                    margin : 20% ;
+                }
+
+        span{font-size: 20px;
+                font-weight: bold;}
+        #login{display: flex;
+            justify-content: center;
+            font-size : 30px;}
+
+        input{display: block;
+            justify-content: center;
+            width: 250px;
+            padding: 10px;
+        
+            border-radius: 7px;}
+
+
+        #boxlogin{margin : 0 30px}
+        #boxpwd{margin : 0 30px}
+        #boxbutton{margin : 0 30px}
+
+
+
+        button{display: flex;
+            justify-content: center;
+            background-color: blue;
+            width: 270px;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;}
+
+
+        #ad{display: flex;
+            justify-content: center;
+            font-size: 10px;}
+        a{text-decoration: none;}
+
+        button:hover{background-color: aqua; color: black;}
+
+        
+
+    </style>
+
+</head>
+<body>
+
+    <div id="loginbox">
+        <span id="login">로그인</span><br>
+
+        <div id="boxlogin">
+            <span id="id">아이디</span><br>
+            <input type="text" placeholder="아이디 입력"><br>
+        </div>
+        <div id="boxpwd">
+            <span id="pwd">비밀번호</span><br>
+            <input type="password" placeholder="비밀번호 입력"><br>
+        </div>
+        <div id="boxbutton">
+            <button type="button">로그인</button><br>
+            <spam id="ad">아직 회원이 아니신가요? <a href="#">회원가입</a></spam>
+        </div>
+    </div>
+
+</body>
+</html>
