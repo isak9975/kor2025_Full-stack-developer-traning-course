@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        @media(max-width : 600px){
+            p{background-color: pink;}
+            .desktop{display: none;}
+            .mobile{display: block;}
+        }
+
+        @media(min-width : 600px){
+            p{background-color: skyblue;}
+            .desktop{display: block;}
+            .mobile{display: none;}
+        }
+                
+
+    </style>
+
+    <!--경우에 따라 모바일과 데스크탑용 디자인을 완전히 별개의 css파일로 관리하려고 할때 
+    미디어 쿼리를 적용 할 수 있다. -->
+    <link rel="stylesheet" href="경로" media="(min-width:600px)">
+
+</head>
+<body>
+    <img class="desktop" src="css/img/profile.jpg">
+    <p>
+        화면에 어떻게 표시되나요?
+    </p>
+    <img class="mobile" src="css/img/profile.jpg">
+</body>
+</html>
