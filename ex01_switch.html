@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+
+        //switch문
+        //if문과 비슷하지만 if문은 조건식이 들어가야 한다.
+        //switch문은 비교값이 들어간다.
+        //switch(비교값){
+        // case 조건값1 :  
+        //      비교값과 조건값1이 일치할 때 실행할 명령;
+        //      break;
+        // case 조건값2 :
+        //      비교값과 조건값2가 일치할 때 실행할 명령;
+        //      break;
+        // case 조건값3 :
+        //      비교값과 조건값3가 일치할 때 실행할 명령;
+        //      break;
+        //}
+
+
+        //switch 기본모양
+        n=1;
+        switch(n){
+            case 1 : console.log('1. 게임하기')
+                     break;
+            case 2 : console.log('2. 환경설정')
+                     break;
+            case 2 : console.log('3. 게임종료')
+                     break;
+        }
+
+
+        //break가 없으면 전부 해당 case부터 아래로 전부 출력된다.
+        switch(n){
+            case 1 : 
+                console.log("n은 1입니다")
+            case 2:
+                console.log("n은 2입니다")
+            case 3:
+                console.log("n은 3입니다")
+        }
+
+        //모든 케이스가 하나의 명령을 공유하는 형태
+        switch(n){
+            case 1 : case 2 : case 3 :
+                console.log(`n값은 ${n}입니다`)
+
+        }
+
+
+
+        //
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
