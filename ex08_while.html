@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>while html</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        //while문
+        //for문은 정해진 횟수만큼 반복하는 분법
+        //반복횟수가 정해져있지 않고, 조건식이 true일경우 계속 반복할 수 있다.
+
+        //while(조건식){
+        //  조건식이 참일 때 반복할 명령
+        //}
+
+        //for문처럼 시작값과 증감값을 가지고 있지 않기 때문에
+        //무한반복에 빠지기 쉽다.
+
+        let num = 1; //시작값
+        while (num < 4){//조건식
+            document.write(num);//실행하고자 하는 명령
+            num++; //증감값이 없으면 무한반복으로 서버가 멈춤.
+        }
+        document.write("<hr>");
+
+        //1에서 10까지의 총합 구하기
+        let num1 = 1;
+        let num2 = 0;
+        while(num1<11){
+            num2 += num1;
+            num1++;
+        }
+        document.write(num2);
+        document.write("<hr>");
+
+        //do-while
+        //명령을 무조건 한번은 실행하고 while 조건식에 따라 반복
+        let y=10;
+        do{
+            document.write(y)
+            y++
+        }
+        while(y<10){
+            
+        }
+
+        //상황에 따라 반복문 사용하기
+        //반복횟수가 지정되는 경우 -> 횟수를 만족할때까지 반복
+        //ex) 물통에 물을 10번 채워라 -> for문
+
+        //특정 조건이 부여되는 경우 -> 조건이 만족할때까지 반복
+        //ex) 물통에 물이 가득찰때까지 채워라 -> while문
+
+        //툭정 조건과 옵션이 부여되는 경우 -> 한번 실행해보고 반복 여부를 판단하기
+        //ex) 물통에 물을 따라보고 안 새면 채워라 -> do - while 문
+
+
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

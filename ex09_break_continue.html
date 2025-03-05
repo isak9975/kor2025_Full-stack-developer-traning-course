@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>break continue</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        //기타제어문
+        //반복을 시작하게되면 조건이 거짓이 될 때까지
+        //멈출수가 없다.
+        //기타제어문을 통해 반복문 자체의 흐름을 개발자가 직접제어할 수 있다.
+        //기타제어문은 반복문 안에서만 작성할수 있다.
+        // break
+        // break를 만나게 되면 반복문을 종료하고 다음 코드를 실행한다.
+
+        for(let i =1; i <10;i++){
+            console.log(i);
+            if(i==3){
+                break;
+            }
+        }
+
+        let n = 1 ;
+        while(true){
+            if(n>5){
+                breakk;
+            }else{
+                console.log(n);
+                n++
+            }
+        }
+
+        //기본적으로 반복문안에 있는 switch의 break는 switch문만 
+        //빠져나간다.
+        //반북문을 나가고 싶으면 레이블을 달면 된다.
+
+        //label
+        //특정 반복문에 이름쵸를 붙어 기타 제어문을 제어할 수 있는 키워드
+        //label은 항상 쌍으로 존재한다.
+        //label의 이름을 짓는것은 제한은 없다.
+        out:for(let i=0; i <3; i++){
+            switch(i){
+                case 0:
+                    console.log(`${i}선택됨`)
+                    break out;
+                case 1 : 
+                    console.log(`${i}선택됨`)
+                    break;
+                case 2 : 
+                    console.log(`${i}선택됨`)
+                    break;
+                    
+            }
+        }
+
+        //continue
+        //반복문 내에서 continue를 만나게 되면
+        //루푸를 한번 건너뛴다.(증감식으로 돌아간다)
+
+        for(let i = 1; i <= 5; i++){
+            if(i%2==0){
+                continue;//짝수 캔슬
+            }
+            console.log(i)
+        }
+
+        n = 0;
+        while(n<10){
+            n++;
+            if(n%2 != 0){
+                continue;//홀수 캔슬
+            }
+            console.log(n)
+        }
+
+        //로도번호 6개를 뽑아
+        //1 ~ 45번
+        //중복되는것이 나왔을 때 continue를 사용해서 다시뽑는다.
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>array html</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        //배열(Array) : 여러 데이터를 하나의 변수에 
+        //순서대로 저장할 수 있는 데이터 구조
+
+        //배열의 생성방법
+        //1. Array생성자 함수 사요하기
+        let arr = new Array(3); //배열의 길이 지정하기
+        console.log("arr ", arr);
+
+        //1-1. 여러개의 초기값을 전달하는 경우
+        let arr2 = new Array(1,2,3);
+        console.log("arr2 ",arr2);
+
+
+        //2. 배열 리터럴 사용
+        let fruits = ['apple','banana','peach','mango']
+        console.log("fruits",fruits)
+
+
+        //인덱스(index)
+        //배열 내부에 저장된 각각의 요소의 위치를 나타내는 숫자.
+        //배열의 첫번째 요소는 0이며 1씩 증가한다.
+
+        //요소에 접근하는 방법
+        //배열명[인덱스번호]
+
+        //동적크기
+        //배열의 크기는 동적으로 변경될 수 있다.
+        //배열에 요소로를 추가하는데로 들어간다.
+        //배열의 마지막인덱스 번호는 항상 길이 -1
+
+        //배열의 각 요소에 접근하여 출력하기
+        console.log(fruits[0]);
+        console.log(fruits[1]);
+        console.log(fruits[2]);
+
+        //배열의 각 요소에 접근하여 값을 대입 가능하다.
+        fruits[0] = 300;
+        console.log(fruits[0])
+    
+
+        //자바스크립트의 배열에 요소는 다른 자료형이어도 가능하다. -배열도 함수도 가능하다.
+        let mixedArray = [42,"hello",true,[1,2,3],null]
+        console.log(mixedArray)
+        
+        //배열의 길이
+        console.log(mixedArray[3].length)
+        console.log(mixedArray.length)
+        console.log(mixedArray[4])
+
+        //잘못된 인덱스에 접근
+        console.log(mixedArray[5])
+
+        //배열의 동적할당
+        mixedArray[5] = 'grape';
+        console.log(mixedArray[5])
+
+        for(let i =0;i<mixedArray.length;i++){
+            console.log(mixedArray[i])
+        }
+
+
+        //for ... of
+        //배열, 문자열 등의 값을 순회할 때 사용
+        const numbers = [10,20,30,40,50];
+        for(let num of numbers){
+            console.log(num)
+        }
+        
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
