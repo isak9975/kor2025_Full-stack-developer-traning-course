@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <script>
+        //원의 넓이를 구하는 circleArea 함수 만들기
+        //원의 둘레를 구하는 circleRound 만들기
+        //circleArea는 함수 안에서 출력하고 마무리
+        //circleRound는 둘레를 반환하기
+        //원의 넓이 : 3.14 * 반지름 * 반지름
+        //원의 둘레 : 2* 3.14 * 반지름
+
+        function circleArea(round){
+            let result = 3.14 * round * round
+            document.write("circleArea : ",result)
+        }
+        circleArea(4)
+        document.write("<hr>")
+
+
+        function circleRound(round){
+            return 2 * round * 3.14
+        }
+        document.write("circleRound : ",circleRound(4))
+        document.write("<hr>")
+
+
+        //사칙연산르 하는 arithmetic 함수 만들기
+        //두 숫자의 덧셈, 뺄셈, 곱셈, 나눗셈을 구하고 출력
+
+        function arithmetic(x,y){
+            document.write(`x : ${x}, y : ${y}<br>`)
+            document.write(`x+y : ${x+y}<br>`)
+            document.write(`x-y : ${x-y}<br>`)
+            document.write(`x*y : ${x*y}<br>`)
+            document.write(`x/y : ${x/y}<br>`)
+        }
+        arithmetic(10,7)
+        document.write("<hr>")
+
+
+
+        //fToc 함수를 만들어서 화씰르 섭 씨로 바꿔서 출력하시
+        //cTof함수를 마든어서 섭씰르 화씨로 바ㅝ서 출력하기
+        //화시 -> 섭시 (화씨-32/1.7
+        //섭씨 -> 화씨 : 1.8*섭씨+32
+        function fToc(f){
+            let result = Math.ceil((f-32)/1.7)
+            document.write(`화씨 -> 섭시 : ${result}(c)<br>`)
+        }
+        function cTof(c){
+            let result = 1.8 * c +32
+            document.write(`섭씨 -> 화씨 : ${result}(f)<br>`)
+        }
+        fToc(75);
+        cTof(24);
+        document.write("<hr>")
+        
+
+        //1~9 사이의 정수를 전달하여 해당 구구단을 출력하는 showTable함수
+        //작성하기
+        function showTable(x){
+            for(let i =1; i <11;i++){
+                document.write(`${x} * ${i} = ${x*i}<br>`)
+            }
+        }
+        showTable(3)
+        document.write("<hr>")
+
+
+        //매개변수로 임의의 숫자를 전달하여 1~N 까지의 총합을 구하는
+        //total함수 만들고 값을 반환하여 화면에 출력하기.
+        function total(x){
+            let result=0;
+            for(let i=1;i<=x;i++){
+                result += i
+            }
+            document.write(`총합 : ${result}`)
+        }
+        total(55);
+        document.write("<hr>")
+
+
+        //N~M까지의 총합
+        //M이 N보다 큰 경우 자리를 바꿔서 총합 구하기
+        function total2(N,M){
+            let total = 0;
+            let max=0;
+            let min=0;
+            if(N>M){
+                max = N;
+                min = M;
+            }
+            else if(N==M){
+                return document.write(`총합은 : ${M}입니다`)
+            }
+            else{
+                max = M;
+                min = N;
+            }
+
+            for(let i = min; i<=max; i++){
+                total += i
+            }
+            return document.write(`${min}~ ${max} 총합은 : ${total}입니다`)
+        }
+        total2(10,1)
+        document.write("<hr>")
+
+
+
+        //숫자들이 담긴 배열을 매개변수로 받아, 배열 내 최대값을 반환하는
+        //Max_arr 함수 만들기
+        function Max_arr(list){
+            let Max=0;
+            for(let i=0; i<list.length ;i++){
+                let a = list[i];
+                for(let j=0; j<i; j++){
+                    let b = list[j];
+                    if(a>b){
+                        if(a>Max){
+                            Max = a;
+                        }
+                    }
+                    else{
+                        if(b>Max){
+                            Max=b;
+                        }
+                    }
+                }
+            }
+            document.write(`가장 큰 값은 ${Max}입니다`)
+        }
+        
+        let list = [5,4,3,,21,2,20,4,5,10,15]
+        Max_arr(list)
+        document.write("<hr>")
+
+        //문자열 뒤집기
+        //문자열을 매개변수로 받아, 해당 문자열을 뒤집어 반환하는 함수 reverse를 작성하시오 
+        function reverse(s){
+            let reverse = '';
+            for(let i = s.length-1; i >= 0; i--){
+                reverse += s[i]
+            }
+            return reverse;
+            document.write("<br>")
+        }
+        document.write(reverse("STRING"))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
