@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        //input에 단을 입력하고 계산시작 누르면 아래에 구구단 나오게 하기
+        //만얀 input에 값이 입력이 안되어있다면 "값을 입력해주세요"
+        //만약input에 1이하 또는 10이상이 입력되었다면 "2~9사이의 값을 입력해주세요"
+        //숨기기버튼 누르면 아래 출력된 구구단 숨기면서 버튼에 쓰여진 value를 보이기로 바꾸기
+        let func1=()=>{
+            let dan = document.querySelector("#danInput").value;
+            let div = document.querySelector("#result")
+
+            if(1>dan||dan>9||dan==0){
+                alert("2~9 사이의 값을 입력해 주세요")
+            }else{
+                console.log(dan)
+                let html = '';
+
+                for(let i=1;i<10;i++){
+                    html += `${dan} x ${i} = ${dan*i}<br>`
+                }
+                div.innerHTML = html;
+            }
+        }
+
+
+        let func2=()=>{
+            let button = document.querySelector("#check")
+            let div = document.querySelector("#result")
+            div.style.color = "black";
+            console.log(button)
+            button.setAttribute('value',"보이기")
+        }
+
+    </script>
+</head>
+<body>
+    단 : <input  id="danInput" type="number"><input type="button" value="계산시작" onclick="func1()"><input id="check" type="button" value="숨기기" onclick="func2()">
+    <div style="font-size: 25px ; background-color: black; border : 1px solid black;width: 500px;height: 500px;color:white" id="result">
+
+    </div>
+</body>
+</html>

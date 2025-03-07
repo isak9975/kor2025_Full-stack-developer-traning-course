@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        let func1 = () => {alert("메서드 정상호출")}
+        let func2 = s => {
+            //id 값이 result인 태그를 res에 대입한다.
+            let res = document.querySelector('#result');
+            //res에 value프로퍼티를 만들고 s에 넘어온값을 대입한다.
+            res.value = s;
+        }
+        //id값이 name태그를 찾아서 value속성에 들어있는 값을 
+        //alert으로 출력하기
+        let func3 = () =>{
+            let name = document.querySelector("#name").value;
+            alert(name);
+        }
+
+        let func4 = () =>{
+            let input = document.querySelector('#res').value;
+            let m_div = document.querySelector("#m_div")
+            m_div.innerHTML += input;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="버튼1" onclick="func1()"><br>
+    <input type="button" value="파라미터 버튼" onclick="func2('홍길동')">
+    <input id="result">
+    <hr>
+
+    <input type="text" value="연습" id ="name">
+    <input type="button" value="버튼3" onclick="func3()">
+    <hr>
+
+    <input id="res">
+    <input type="button" value="버튼4" onclick="func4()">
+    <div id="m_div">
+
+
+    </div>
+    
+</body>
+</html>

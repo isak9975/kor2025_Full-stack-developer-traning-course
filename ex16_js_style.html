@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <p id="p_id">자바스크립트로 CSS바꾸기 연습</p>
+
+
+
+
+    <script>
+        //JavaScript를 통해 태그의 CSS를 변경할수도 있다.
+        //js에서 제공하는 style객체를 이용하면 된다.
+
+        //1.html  태그 선택하기
+        let element = document.querySelector('#p_id');
+
+        //2. style객체 이용해서 스타일 주기
+            //자동완성 불가능
+        element.style.backgroundColor="lightblue";
+        element.style.color="red";
+        element.style.fontSize = '30px';
+        element.style.border = '2px solid black';
+
+    </script>
+    
+</body>
+</html>
