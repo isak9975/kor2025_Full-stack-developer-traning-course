@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        function gugudan(){
+        //1. input 태그에 쓰여진 value 읽어온다
+            let dan = document.querySelector("#dan").value;
+
+        //2. 유효성 체크를 한다.(빈칸, 범위 맞지 않는 수)
+            if(dan.trim()===''){
+                alert('값을 입력해야 합니다.')
+                return; //함수를 빠져나간다. 
+                        // => if문자체에서는 return이 의미가 없지만 function으로 봤을때는 return 이 빠져나가는것이니
+            }
+
+            if(dan<2||dan>9){
+                alert('2~9사이의 값만 입력해주세요');
+                return;
+            }
+
+        //3. 구구단 계산
+            str = "";
+            for(let i = 1; i< 10; i++){
+                str += dan  + 'X' + i + '=' + (dan*i) + "<br>";
+            }
+
+        //4. div에 넣기
+            //4-1. div 태그 선택하기
+            let g_div =  document.querySelector('#disp');
+            g_div.innerHTML = str;
+        }//end f
+
+
+        //두가지 선택지가 있으면 논리형으로 해결하는것이 좋다.
+        let b_show = true;
+        function show(){
+            b_show = !b_show;
+            document.querySelector("#bt_show").value = b_show?'숨기기':'보이기'
+            //div에 display 변경 
+            document.querySelector('#disp').style.display = b_show?'block':'none'
+        }
+//========================================================================================================================
+        //계산기 만들기   
+        // let b1 = document.querySelector("#a")
+        // let b2 = document.querySelector("#m")
+        // let b3 = document.querySelector("#x")
+        // let b4 = document.querySelector("#l")
+
+
+        // let calculater = (event) => {
+        //     let n1 = document.querySelector("#n1").value
+        //     let n2 = document.querySelector("#n2").value
+        //     let result = document.querySelector("#result")
+           
+        //     switch(event.target.id){
+        //         case 'a' :
+        //             console.log("run!")
+        //             result.innerHTML = `${parseInt(n1) + parseInt(n2)}`;
+        //             break;
+        //         case 'm' :
+        //             result.innerHTML = `${n1 - n2}`;
+        //             break;
+        //         case 'x' :
+        //             result.innerHTML = `${n1 * n2}`;
+        //             break;
+        //         case 'l' :
+        //             result.innerHTML = `${n1 / n2}`;
+        //             break;
+        //     }
+        // }//end cal
+
+        //     b1.addEventListener('click',calculater)
+        //     b2.addEventListener('click',calculater)
+        //     b3.addEventListener('click',calculater)
+        //     b4.addEventListener('click',calculater)
+
+    </script>
+    <style>
+        #container div{border : 1px solid black; display: flex; flex-direction: row; width: 300px; height: auto;}
+        span{border : 1px solid black}
+    </style>
+</head>
+<body>
+    <p>
+        단 : 
+        <input id = "dan">
+        <input type="button" value="계산시작" onclick="gugudan()">
+        <input id="bt_show" type="button" value="숨기기" onclick="show()">
+        <hr>
+        <div id="disp"></div>
+    </p>
+    <hr>
+    <!-- 계산기 만들기 -->
+
+    <!-- <div id="container">
+        <div>
+            <span>수1</span><input  id="n1" type="number">
+        </div>
+        <div>
+            <span>수2</span><input id="n2" type="number">
+        </div>
+        <div style="height: auto;">
+            <input type="button" id="a" value="+"> 
+            <input type="button" id="m" value="-">
+            <input type="button" id="x" value="*">
+            <input type="button" id="l" value="/">
+        </div>
+        <div>
+            <span>결과</span><span><span id="result"></span></span>
+        </div>
+    </div> -->
+
+    <hr>
+<!-- ================================================================================================================= -->
+    <!-- 계산기 만들기 정답 -->
+     <table border="1">
+        <tr>
+            <th class="su">수1</th>
+            <td><input id=su1 placeholder="정수만 입력하세요"></td>
+        </tr>
+        <tr>
+            <th class="su">수2</th>
+            <td><input id=su2 placeholder="정수만 입력하세요"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input type="button" value="+" onclick="cal('+')">
+                <input type="button" value="-" onclick="cal('-')">
+                <input type="button" value="*" onclick="cal('*')">
+                <input type="button" value="/" onclick="cal('/')">
+            </td>
+        </tr>
+        <tr>
+            <th>결과</th><td><input id="result" readonly></td>
+        </tr>
+
+     </table>
+
+     <script>
+        function cal(op){
+                //document.querySelector("#su1").value; 자료형은 무조건 문자열
+            let su1 = parseInt(document.querySelector("#su1").value);
+            let su2 = parseInt(document.querySelector("#su2").value);
+
+            let result = document.querySelector('#result')
+
+            if(Number.isNaN(su1) || Number.isNaN(su2)){
+                alert("값을 입력해주세요.")
+                return
+            }   
+
+            if (su1 <=0 || su2<=0){
+                alert(" 0 이상의 수를 입력해주세요")
+                return
+            }
+
+            if(op==='+'){
+                console.log(su1)
+                result.value = su1+su2;
+            }else if(op==='-'){
+                result.value = su1-su2;
+            }else if(op==='*'){
+                result.value = su1*su2;
+            }else if(op === '/'){
+                result.value - su1/su2;
+            }
+            
+        }
+     </script>
+
+        
+
+
+
+
+    
+    
+</body>
+</html>

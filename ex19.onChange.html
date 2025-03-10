@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>onChange html</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h2>onChange 예제</h2>
+    <p>입력 상자에 값을 입력한 후 포커스를 다른쪽으로 이동하면 onchanege 이벤트 발생</p>
+    <input id="inputbox" onchange="handleChange()" placeholder="여기에 입력하세요">
+    <div id="result">
+    </div>
+
+    <script>
+        //onChange
+        //입력상자에 값을 입력한 후 포커스를 잃었을 때 이벤트가 발생된다.
+        function handleChange(){
+            let value = document.querySelector("#inputbox").value;
+            document.querySelector("#result").textContent = "입력된값 : " + value;
+        }
+    </script>
+
+    <hr>
+
+    <h2>oninput 예제</h2>
+    <p>입력 상자에 값을 입력할 때 oninput 이벤트 발생</p>
+    <input id="inputbox2" oninput="handleChange()" placeholder="여기에 입력하세요">
+    <div id="result2">
+    </div>
+    <script>
+        function handleChange(){
+            let value = document.querySelector("#inputbox2").value;
+            document.querySelector("#result2").textContent = "입력된값 : " + value;
+        }
+    </script>
+
+    <hr>
+
+    <h2>마우스 오버 / 아웃 이벤트</h2>
+    <!-- line-height: 50px : 세로로 간격 조정. -->
+    <div onmouseover="handleMouseOver()" onmouseout="handleMouseOut()" 
+    style="text-align: center; line-height: 50px;width: 200px;height: 50px;background-color: #f0f0f0;">
+    <b>마우스를 올려보세요</b>
+    </div>
+    <p id="hoverResult"></p>
+
+    <script>
+        function handleMouseOver(){
+            document.querySelector('#hoverResult').textContent = "마우스가 요소위에 있습니다"
+            console.log("in")
+        }
+
+        function handleMouseOut(){
+            document.querySelector('#hoverResult').textContent = "마우스가 요소를 벗어났습니다."
+            console.log("out")
+        }
+    </script>    
+
+
+    <hr>
+    <h2>더블클릭 이벤트</h2>
+    <button ondblclick="handleDoubleClick()">더블클릭 해보세요</button>
+    <p id="dbColickResult"></p>
+
+    <script>
+        function handleDoubleClick(){
+            document.querySelector("#dbColickResult").textContent = "더블클릭 성공"
+        }
+    </script>
+</body>
+</html>

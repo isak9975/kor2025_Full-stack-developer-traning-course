@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="/css/img/left_btn.png" onclick="move(-1)">
+        <img width="300px" id="img" src="/css/img/img6.jpg">
+        <img src="/css/img/right_btn.png" onclick="move(1)">
+    </div>
+    <script>
+        let home = 6;
+        let move = (num) => {
+            let img = document.querySelector("#img")
+            
+            img.setAttribute("src",`/css/img/img${home+num}.jpg`)
+            
+            if(home+num==7){
+                home=1;
+                console.log("upset",home)}
+            else if(home+num==1){
+                home=7;
+                console.log("downset",home)
+            }else{home+=num;
+                console.log("move",home)
+                console.log(img.getAttribute("src"))
+                console.log(img.getAttributeNames())
+            }
+        }
+
+        setInterval("move(1)",1000);
+        //각 호출 사이에 고정된 시간으로 함수를 반복적으로 호출할 수 있다.
+    </script>
+
+<!-- =================================================================================== -->
+ <!-- <a href="#" onclick="prev()">
+    <img src="/css/img/left_btn.png">
+ </a>
+
+ <img id="gallery"width="300px" id="img" src="/css/img/img6.jpg">
+
+<a href="#" onclick="next()">
+    <img  src="/css/img/right_btn.png">
+</a>
+
+<script>
+    let path = "/css/img/img";
+    let num1 =  1;
+  
+    function prev(){
+        if(num1<=1){
+        num1=7;
+    }
+        num1--;
+        //img태그의 src에 들어있는 경로를 수정
+        let prev_img = document.querySelector("#gallery");
+        prev_img.src = `${path+num1}.jpg`
+    }
+
+    function next(){
+    if(num>=7){
+        num1=1;
+    }
+        num1++;
+        let next_img = document.querySelector("#gallery")
+        next_img.src = `${path+num1}.jpg`
+    } -->
+    <!-- setInterval("next()"",1000);
+    //각 호출 사이에 고정된 시간으로 함수를 반복적으로 호출할 수 있다. -->
+
+</script>
+    
+</body>
+</html>

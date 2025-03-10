@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        
+
+    </script>
+</head>
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <th>ID : </th>
+                <td><input name=m_id placeholder="아이디를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <th>AGE : </th>
+                <td><input name=m_age placeholder="나이를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <th>PASSWORD : </th>
+                <td><input name=m_pwd type="password" placeholder="비밀번호를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="전송" onclick="check()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="초기화" onclick="reset()">
+                </td>
+            </tr>
+
+            <form></form><!-- .form[1] -->
+            <form></form><!-- .form[2] -->
+
+            <script>
+                function check(){
+                    //forms : 현재 html 문서 내의 form 들을 순차적으로 배열로 정의해둔 형태
+                    //body 에 form 태그가 여러개 존재할 경우 forms 배열에 0,1,2 인덱스로 form 태그를 구별한다.
+                    let f = document.forms[0];
+
+                    //form 태그에서 m_id라는 name 값을 가지고 있는 입력상자의 값
+                        //form 은 name으로 구분한다.
+                    let myId = f.m_id.value;
+                    if(myId==''){
+                        alert('아이디는 필수사항입니다.')
+                        return 
+                    }
+
+                    let myAge = f.m_age.value;
+                    if(myAge==''){
+                        alert('나이는 필수사항입니다.')
+                        return 
+                    }
+
+                    let myPwd = f.m_pwd.value;
+                    if(myPwd==''){
+                        alert('비밀번호는 필수사항입니다.')
+                        return 
+                    }
+
+                    //전송받식
+                    f.method="GET";
+
+                    //목적지
+                    f.action="login.jsp";
+
+
+                    //입력된 데이터를 전송
+                    f.submit();
+                    // button type=submit이 있는데 이때 버튼을 누르면 바로 전송된다.
+                    //     지금 사용하지 않은 이유는 유효성 검사를 한번 진행하기 위해서
+                    // 마지막에 sumbit();을 진행해야만 데이터를 전송한다.
+                    //     반대로 하지 않으면 다른세팅을 해도 넘어가지 않는다.
+                    // form 객체를 사용하면 편하게 컨트롤하여 넘길수 있다.
+                    //     key는 "name"값을 사용하므로 잘 작성해야한다. => name 다른곳에 쓸 수 있나? class나 id처럼.
+                }//end check();
+            </script>      
+        </table>
+    </form>
+    
+</body>
+</html>
