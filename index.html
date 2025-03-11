@@ -14,11 +14,14 @@
         </style> -->
 
         <!-- relationship : 연결하려는 파일과의 관계 -->
-        <link rel="stylesheet" href="/style.css">
-        
+        <!-- CSS -->
+        <link rel="stylesheet" href="/html/style.css">
+        <!-- JS -->
+        <script src="/html/script.js"></script>
+
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
         
-
+       
 
     </head> 
     <body><!-- HTML문서에서 실직적으로 보이는 영역을 정의하는 구간 -->
@@ -39,20 +42,21 @@
     <!-- 프로필 -->
     <div id="profile">
         <div id="profile_pic">
-            <img src="/css/img/profile.jpg" class="circle_pic"></img>  
+            <img src="/css/img/profile.jpg" class="circle_pic" style="cursor: pointer;"></img>  
         </div>
         <div id="profile_info">
-            <div id="id">half_bottle<i  style="font-size: 20px; margin-left: 10px;" class="fa-solid fa-gear"></i></div>
+            <div id="id">
+                <span>half_bottle</span>
+                <i  style="font-size: 20px; margin-left: 10px;" class="fa-solid fa-gear"></i></div>
             <button type="button">프로필편집</button>
         </div>
     </div>
     <div>
-            <strong>
-                반병현(Bynghyun Ban)
-            </strong><br>
-            작가<br>
-        
-            <p><a href="https://needleworm.github.io">needleworm.github.io</a></p>
+            <strong id="userInfo">반병현(Bynghyun Ban)</strong><br>
+            <span id="summary">작가</span><br>
+            <p id="profileDetail">
+                <a href="https://needleworm.github.io">needleworm.github.io</a>
+            </p>
     </div>
 
     <!-- 하이라이트 들어갈 자리 -->
@@ -60,7 +64,7 @@
 
         <div class="highlight">
             <div class="highlight_pic">
-                <img src="/css/img/하이라이트1.jpg" class="circle_pic"></img>
+                <img src="/css/img/하이라이트1.jpg" class="circle_pic" ></img>
             </div>
             <div>
                  🤣

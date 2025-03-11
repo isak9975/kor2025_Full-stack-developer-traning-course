@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+
+
+    </script>
+</head>
+<body>
+    <form action="login.jsp" method="GET" name="ff">
+        <table border="1">
+            <tr>
+                <th>ID : </th>
+                <td><input name=m_id placeholder="아이디를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <th>AGE : </th>
+                <td><input name=m_age placeholder="나이를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <th>PASSWORD : </th>
+                <td><input name=m_pwd type="password" placeholder="비밀번호를 입력해주세요"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <!-- 버튼을 포함하고 있는 form태그의 정보를 매개변수로 전달 -->
+                    <input type="button" value="전송" onclick="check()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="초기화" onclick="reset()">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    <script>
+        //form 태그를 읽어오는 두번째 방법
+        function check(){
+            //form태그에 준 name값을 가지고 바로 선택할 수 있다.
+            let f= document.ff;
+
+            //id input태그 선택하기
+            let myId = f.m_id.value;
+
+            f.submit(); //form 에서 action과 method정의 해놨기 때문에 가능함.
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <div>
+        <strong>이름 : </strong><span id="nameHere">None</span>
+        <input type="button" id="nameEditbutton" value="수정">
+    </div>
+    <div id="editNameField" style="display: none;">
+            <input id="newName" placeholder="새 이름을 입력하세요">
+            <input id="okButton" type="button" value="확인">
+    </div>
+
+    <script>
+        //addEventListener(이벤트,함수)
+        document.addEventListener("DOMContentLoaded",(e)=>{
+            let nameEditbutton = document.querySelector("#nameEditbutton")
+    
+            let editName = document.querySelector("#editNameField")
+
+            let newName = document.querySelector("#newName");
+            
+            let okButton = document.querySelector("#okButton")
+
+            let nameHere = document.querySelector("#nameHere")
+
+            nameEditbutton.addEventListener("click",(e)=>{
+                editName.style.display = "block";
+                nameEditbutton.style.display = "none";
+                newName.value = "";
+            })
+
+            okButton.addEventListener("click",(e)=>{
+                nameHere.textContent = newName.value;
+                editName.style.display = "none";
+                nameEditbutton.style.display = "inline";
+            })
+
+
+
+
+
+
+        })
+    </script>
+    
+</body>
+</html>
