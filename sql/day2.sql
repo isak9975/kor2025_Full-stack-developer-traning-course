@@ -233,3 +233,83 @@ SELECT * FROM TBL_STUDENT;
 -- 두 테이블 A와 B가 있을 때 A의 정보와 B의 정보 하나가 연결된 관계
 	-- 한사람은 하나의 여권만 소지할 수 있고
 	-- 하나의 여권은 한 사람에게만 발급된다
+
+-- 일대다 관계
+-- 테이블 A의 레코드(행) 하나가 B의 여러 행과 연결되는 관계
+	-- 한사람이 여러개의 부동산을 가질 수 있다.
+	-- 하나의 집은 주인이 한명이다.
+
+-- 다대다 관게
+-- 테이블 A의 행 하나가 테이블 B의 행 여러개와,
+-- 테이블 B의 행 하나가 테이블 A의 행 여러개와 연결된 관계
+-- 학생과 강의의 관계
+-- 한 학생이 여러강의를 수강할 수 있다.
+-- 하나의 강의는 여러 학생들이 들으 수 있다.
+
+-- 다대다 관계는 두개의 테이블 사이에서 직접 구현할 수 없으므로
+-- 연결 테이블을 사용하여 테이블 A와 B를 연결한다.
+-- 연결테이블은 두 테이블의 기본키를 외래키로 포함하며
+-- 복합 기본키로 지정하는 경우가 많다.
+
+
+/*
+1. 데이터베이스 설계 순서로 옳은 것은?
+1. 요구사항 분석 → 물리적 모델링 → 논리적 모델링 → 개념적 모델링 → 데이터베이스 구현
+
+2. 요구사항 분석 → 개념적 모델링 → 논리적 모델링 → 물리적 모델링 → 데이터베이스 구현///
+
+3. 요구사항 분석 → 논리적 모델링 → 개념적 모델링 → 물리적 모델링 → 데이터베이스 구현
+
+4. 요구사항 분석 → 논리적 모델링 → 물리적 모델링 → 개념적 모델링 → 데이터베이스 구현
+
+2.CD 정보를 데이터베이스에 저장하려고 한다.
+CD는 타이틀, 가격, 장르, 트랙 리스트 등의 정보를 가지고 있다.
+각 CD는 아티스트가 있으며 아티스트는 여러 CD를 출반한다.
+트랙은 타이틀, 러닝타임(초)이 있다.
+개체와 관계
+개체(Entity)
+CD : 타이틀, 가격, 장르, 트랙 리스트
+아티스트 : 이름, 국적, 데뷔년도
+트랙 : 타이틀, 러닝타임
+관계(Relationship)
+CD와 아티스트는 N:1(한명의 아티스트는 여러 CD를 낼 수 있다.)
+CD와 트랙은 1:N(하나의 CD에는 여러 트랙이 포함될 수 있다.)
+
+
+
+3. 10번 및 30번 부서에 속하는 모든 사원 중 급여가 1500을 넘는 사원의사원번호,이름 및 급여를 조회하세요
+
+4. 관리자가 없는 모든 사원의 이름 및 직종을 출력하세요
+
+5. 직업이 IT_PROG 또는 SA_MAN 이면서 급여가 1000,3000,5000이 아닌 모든 사원들의 이름, 직종 및 급여를 조회하세요
+*/
+--2.
+CREATE TABLE CD(
+	TITLE VARCHAR2(100) PRIMARY KEY,
+	PRICE NUMBER,
+	GENRE VARCHAR2(100),
+	TRACKLIST VARCHAR2(100),
+	ARTIST VARCHAR2(100),
+	CONSTRAINT CD_FK FOREIGN KEY (ARTIST) REFERENCES ARTIST(NAME)
+);
+
+CREATE TABLE ARTIST(
+	NAME VARCHAR2(100) PRIMARY KEY,
+	nation VARCHAR2(100),
+	DEVIEW DATE
+);
+
+CREATE TABLE TRACK(
+	CD VARCHAR2(100),
+	TITLE VARCHAR2(100) PRIMARY KEY,
+	RUNTIME VARCHAR2(100),
+	CONSTRAINT TRACK_FK FOREIGN KEY (CD) REFERENCES CD(TITLE)
+);
+
+
+--3.
+SELECT EMPLOYEE_ID, FIRST_NAME, SALARY FROM EMPLOYEES WHERE SALARY>1500 AND DEPARTMENT_ID IN (10,30);
+--4.
+SELECT FIRST_NAME, JOB_ID FROM EMPLOYEES WHERE MANAGER_ID IS NULL;--NOT LIKE '%_%';
+--5.
+SELECT FIRST_NAME,JOB_id,SALARY FROM EMPLOYEES WHERE JOB_ID IN ('IT_PROG','SA_MAN') AND SALARY NOT IN (1000,3000,5000);
